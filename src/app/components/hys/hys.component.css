@@ -8,3 +8,9 @@ div{
 h1{
     color: #210B61
 }
+
+.circulo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

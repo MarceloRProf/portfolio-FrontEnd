@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { persona } from 'src/app/model/persona.model';
+import { PersonaService } from 'src/app/service/persona.service';
+import { TokenService } from 'src/app/service/token.service';
 
 @Component({
   selector: 'app-header',
@@ -7,16 +10,44 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit{
+  isLogged = false;
+ 
 
-  constructor(private router:Router) {
+  constructor(private router:Router, private tokenService: TokenService, public personaService: PersonaService) { }
+    
+  ngOnInit(): void { 
+    if (this.tokenService.getToken()){
+      this.isLogged = true;
+    }else{
+      this.isLogged = false;
+    }
+    }
 
-  }
+   
+ 
 
-  ngOnInit(): void {
+  onLogOut():void{
+    this.tokenService.logOut();
+    window.location.reload();
   }
 
   login(){
-    this.router.navigate(['/login'])
+    this.router.navigate(['/login']);
   }
 
+  
+      
+  
 }
+  
+
+
+  
+ 
+    
+
+
+
+
+  
+
