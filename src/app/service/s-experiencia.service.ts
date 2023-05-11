@@ -7,7 +7,7 @@ import { Experiencia } from '../model/experiencia';
   providedIn: 'root'
 })
 export class SExperienciaService {
-  expURL = 'http://localhost:8080/explab/' //Sale del controller experiencia
+  expURL = 'https://portfoliobackmarceloriss.onrender.com/explab/'; //http://localhost:8080/explab/' //Sale del controller experiencia
 
   constructor(private httpClient: HttpClient) {  }
 

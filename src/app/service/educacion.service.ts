@@ -9,7 +9,7 @@ import { Educacion } from '../model/educacion';
 })
 export class EducacionService {
 
-  expURL = 'http://localhost:8080/educacion/' //Sale del controller educacion
+  expURL = 'https://portfoliobackmarceloriss.onrender.com/educacion/' //'http://localhost:8080/educacion/' //Sale del controller educacion
 
   constructor(private httpClient: HttpClient) { }
     public lista(): Observable<Educacion[]>{

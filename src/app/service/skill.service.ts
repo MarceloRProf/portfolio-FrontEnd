@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class SkillService {
 
-  skillURL = 'http://localhost:8080/skill/' //Sale del controller hys
+  skillURL = 'https://portfoliobackmarceloriss.onrender.com/skill/'; //'http://localhost:8080/skill/'; //Sale del controller hys
 
   constructor(private httpClient: HttpClient) {  }
 
